@@ -53,13 +53,11 @@ CREATE UNIQUE INDEX "akTag" ON "Tag" ("name");
 CREATE TABLE "Equipment" (
   "eid" bigint generated always as identity,
   "url" text NOT NULL,
-  "tags" text NOT NULL,
   "name" text NOT NULL,
   "description" text NOT NULL,
   "country" text NOT NULL,
   "city" text NOT NULL,
   "institute" text NOT NULL,
-  "service" int NOT NULL,
   "approved" boolean NOT NULL
 );
 
