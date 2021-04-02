@@ -43,14 +43,3 @@ ALTER TABLE "Country" ADD CONSTRAINT "pkCountry" PRIMARY KEY ("countryId");
 
 CREATE UNIQUE INDEX "akCountry" ON "Country" ("name");
 
-CREATE TABLE "City" (
-  "cityId" bigint generated always as identity,
-  "name" varchar NOT NULL,
-  "countryId" bigint NOT NULL
-);
-
-ALTER TABLE "City" ADD CONSTRAINT "pkCity" PRIMARY KEY ("cityId");
-
-CREATE UNIQUE INDEX "akCity" ON "City" ("name");
-
-ALTER TABLE "City" ADD CONSTRAINT "fkCityCountryId" FOREIGN KEY ("countryId") REFERENCES "Country" ("countryId") ON DELETE CASCADE;

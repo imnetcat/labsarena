@@ -1,0 +1,23 @@
+{
+  "name": "Labs Arena",
+  "short_name": "LabsArena",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#009933",
+  "background_color": "#552277",
+  "description": "Search, share or sale scientific equipment & consumables",
+  "categories": ["equipment", "community"],
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "metarhia.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    }
+  ]
+}

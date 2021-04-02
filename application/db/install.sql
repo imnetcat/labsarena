@@ -1,2 +1,2 @@
-CREATE USER marcus WITH PASSWORD 'marcus';
-CREATE DATABASE application OWNER marcus;
+CREATE USER imnetcat WITH PASSWORD 'imnetcat';
+CREATE DATABASE application OWNER imnetcat;
