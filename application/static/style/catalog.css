@@ -1,0 +1,60 @@
+.catalog {
+    margin-top: 60px;
+    margin-left: 20%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: calc(100% - 60px);
+    z-index: 101;
+    background: #fff;
+}
+.side-menu {
+    font-size: 1.5em;
+    margin-top: 60px;
+    padding: 15px;
+    position: fixed;
+    width: calc(20% + 16px);
+    height: calc(100% - 60px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 100;
+}
+h2 {
+	text-align: center;
+}
+h1, h2, h3 {
+	font-weight: bold;
+}
+hr {
+    border-style: inset;
+    border-width: 1px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.item {
+    color: #798da3;
+    width: 400px;
+    height: 400px;
+    border: 1px solid #eef1f5;
+    box-shadow: none;
+    border-radius: 15px;
+    padding: 15px;
+	transition: 0.25s all linear;
+    text-align: center;
+    font-size: 1.5em;
+}
+.item:hover {
+    box-shadow: 10px 10px 10px #eef1f5;
+}
+.item span {
+    display: block;
+}
+.title {
+}
+.city {
+}
+.institute {
+	
+}

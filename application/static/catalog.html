@@ -21,28 +21,68 @@
   </head>
 
 <body>
-	<div class="wrapper">
-		<header class="header">
-			<div class="container">
-				<a href="index.html" id="header_logo"><img src="images/LOGO.png" width="66" height="34" alt="LOGO"></a>
-				<nav class="menu_body">
-					<ul class="menu_list">
-					<li><a href="">About us</a></li>
-					<li><a href="">Contact us</a></li>
-					<li><a href="">Support the project</a></li>
-					<li><a href="">Questionnaire</a></li>
-					<li><a href="">Blog</a></li>
-					<li ><a class="orange_button" href="">Registration</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-		<main class="page">
-            <div class="side-menu">
-            </div>
-            <div class="catalog">
-            </div>
-		</main>
-	</div>
+	<header class="header">
+		<div class="container">
+			<a href="index.html" id="header_logo"><img src="images/LOGO.png" width="66" height="34" alt="LOGO"></a>
+			<nav class="menu_body">
+				<ul class="menu_list">
+				<li><a href="">About us</a></li>
+				<li><a href="">Contact us</a></li>
+				<li><a href="">Support the project</a></li>
+				<li><a href="">Questionnaire</a></li>
+				<li><a href="">Blog</a></li>
+				<li ><a class="orange_button" href="">Registration</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main class="page">
+        <div class="side-menu">
+			<h2>Filters</h2>
+			<h3>Analitical Techniques</h3>
+			<h3>X-Ray based</h3>
+			<ul>
+				<li>
+					<input type="checkbox" id="tech-xrd" name="xrd" checked>
+					<label for="xrd">XRD</label>
+				</li>
+				<li>
+					<input type="checkbox" id="tech-xrd" name="xrf" checked>
+					<label for="xrf">XRF</label>
+				</li>
+				<li>
+					<input type="checkbox" id="tech-txrf" name="txrf" checked>
+					<label for="txrf">TXRF</label>
+				</li>
+				<li>
+					<input type="checkbox" id="tech-saxs" name="saxs" checked>
+					<label for="saxs">SAXS</label>
+				</li>
+			</ul>
+			<h3>Country</h3>
+			<select>
+				<option value="">--Please choose a country--</option>
+				<option value="ukraine">Ukraine</option>
+				<option value="portugal">Portugal</option>
+				<option value="poland">Poland</option>
+				<option value="germany">Germany</option>
+				<option value="estonia">Estonia</option>
+				<option value="japan">Japan</option>
+			</select>
+			<h3>Service type</h3>
+			<h3>Institute</h3>
+        </div>
+        <div class="catalog">
+			
+			<a class="item" target="_blank" href="https://www.intibs.pl/en/the-institute/research/division-of-nanomaterials-chemistry-and-catalysis.html">
+				<span class="title">Philips CM-20 SuperTwin transmission electron microscope: accelerating voltage of 200 kV, resolution of 0.24 nm.</span>
+				<hr>
+				<span class="city">Poland (Wroclaw)</span>
+				<br>
+				<span class="institute">INTIBS PAN, Division of Nanomaterials Chemistry and Catalysis Laboratory of Electron Microscopy</span>
+			</a> 
+				
+        </div>
+	</main>
 </body>
 </html>
