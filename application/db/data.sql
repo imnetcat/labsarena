@@ -55,8 +55,8 @@ INSERT INTO "Equipment" ("url", "name", "description", "country", "city", "insti
   ('https://rigaku.com/products/xrd/smartlab', 'High resolution X-Ray  Diffractometer', '', 'Estonia', 'Riga', 'The Institute of Physics for Advanced Materials, Nanotechnology and Photonics (IFIMUP)', true),
   ('https://rigaku.com/products/xrd/smartlab', 'High resolution X-Ray  Diffractometer', '', 'Estonia', 'Riga', 'Rigaku Corporation', true),
   ('https://rigaku.com/products/xrd/smartlab', 'SmartLab AUTOMATED MULTIPURPOSE X-RAY DIFFRACTOMETER (XRD) WITH GUIDANCE SOFTWARE', '', 'Estonia', 'Riga', 'Rigaku Corporation', true),
-  ('https://cemup.up.pt/webcemup/IMICROS/IMICROS_lab/IMICROS_lmev.htm#REEQ', 'FEI quanta 400 FEG SEM / EDAX Genesis', '', 'Portugal', 'Porto', 'MATERIALS CENTRE OF THE UNIVERSITY OF PORTO', true),
-  ('https://cemup.up.pt/webcemup/IMICROS/IMICROS_lab/IMICROS_lmev.htm#REEQ', 'Kratos Axis Ultra HSA', '', 'Portugal', 'Porto', 'MATERIALS CENTRE OF THE UNIVERSITY OF PORTO', true);
+  ('https://cemup.up.pt/webcemup/IMICROS/IMICROS_lab/IMICROS_lmev.htm#REEQ', 'FEI quanta 400 FEG SEM / EDAX Genesis', 'High Resolution Environmental Scanning Electron Microscope (Schottky) ,with X-Ray Microanalysis FEI Quanta 400FEG ESEM / EDAX Genesis X4M 1.2 nm resolution', 'Portugal', 'Porto', 'MATERIALS CENTRE OF THE UNIVERSITY OF PORTO', true),
+  ('https://cemup.up.pt/webcemup/IMICROS/IMICROS_lab/IMICROS_lmev.htm#REEQ', 'Kratos Axis Ultra HSA', 'High Resolution Environmental Scanning Electron Microscope (Schottky) ,with X-Ray Microanalysis FEI Quanta 400FEG ESEM / EDAX Genesis X4M  1.2 nm resolution', 'Portugal', 'Porto', 'MATERIALS CENTRE OF THE UNIVERSITY OF PORTO', true);
   
 INSERT INTO "EquipmentService" ("serviceid", "eid") VALUES
   (1, 1),
