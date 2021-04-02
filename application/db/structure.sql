@@ -36,34 +36,51 @@ ALTER TABLE "SystemSession" ADD CONSTRAINT "fkSystemSessionUser" FOREIGN KEY ("s
 
 
 CREATE TABLE "Service" (
-  "serviceId" int generated always as identity,
+  "serviceid" int generated always as identity,
   "name" varchar NOT NULl
 );
 
-ALTER TABLE "Service" ADD CONSTRAINT "pkService" PRIMARY KEY ("serviceId");
+ALTER TABLE "Service" ADD CONSTRAINT "pkService" PRIMARY KEY ("serviceid");
 CREATE UNIQUE INDEX "akService" ON "Service" ("name");
 
 CREATE TABLE "Tag" (
-  "tagId" int generated always as identity,
+  "tagid" int generated always as identity,
   "name" varchar NOT NULl
 );
-ALTER TABLE "Tag" ADD CONSTRAINT "pkTag" PRIMARY KEY ("tagId");
+ALTER TABLE "Tag" ADD CONSTRAINT "pkTag" PRIMARY KEY ("tagid");
 CREATE UNIQUE INDEX "akTag" ON "Tag" ("name");
 
 CREATE TABLE "Equipment" (
   "eid" bigint generated always as identity,
-  "url" text,
-  "tags" text,
-  "name" text,
-  "description" text,
-  "country" text,
-  "city" text,
-  "institute" text,
-  "service" int,
-  "approved" boolean
+  "url" text NOT NULL,
+  "tags" text NOT NULL,
+  "name" text NOT NULL,
+  "description" text NOT NULL,
+  "country" text NOT NULL,
+  "city" text NOT NULL,
+  "institute" text NOT NULL,
+  "service" int NOT NULL,
+  "approved" boolean NOT NULL
 );
 
 ALTER TABLE "Equipment" ADD CONSTRAINT "pkEquipment" PRIMARY KEY ("eid");
 ALTER TABLE  "Equipment" ADD CONSTRAINT "fkEquipment" FOREIGN KEY ("service") REFERENCES "Service" ("serviceId");
 
+CREATE TABLE "EquipmentTags" (
+  "tagid" int NOT NULL,
+  "eid" int NOT NULL
+);
+ALTER TABLE "EquipmentTags" ADD CONSTRAINT "fk1EquipmentTags" FOREIGN KEY ("tagid") REFERENCES "Tag" ("tagid");
+ALTER TABLE "EquipmentTags" ADD CONSTRAINT "fk2EquipmentTags" FOREIGN KEY ("eid") REFERENCES "Equipment" ("eid");
+
+
+CREATE TABLE "EquipmentService" (
+  "serviceid" int NOT NULL,
+  "eid" int NOT NULL
+);
+ALTER TABLE "EquipmentTags" ADD CONSTRAINT "fk1EquipmentService" FOREIGN KEY ("serviceid") REFERENCES "Service" ("serviceid");
+ALTER TABLE "EquipmentTags" ADD CONSTRAINT "fk2EquipmentService" FOREIGN KEY ("eid") REFERENCES "Equipment" ("eid");
+
+  
+  
 
