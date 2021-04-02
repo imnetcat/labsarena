@@ -48,6 +48,7 @@ CREATE TABLE "Equipment" (
   "eid" bigint generated always as identity,
   "url" text,
   "name" text,
+  "description" text,
   "country" text,
   "city" text,
   "institute" text,
