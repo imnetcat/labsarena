@@ -34,12 +34,28 @@ CREATE TABLE "SystemSession" (
 ALTER TABLE "SystemSession" ADD CONSTRAINT "pkSystemSession" PRIMARY KEY ("systemSessionId");
 ALTER TABLE "SystemSession" ADD CONSTRAINT "fkSystemSessionUser" FOREIGN KEY ("systemUserId") REFERENCES "SystemUser" ("systemUserId");
 
-CREATE TABLE "Country" (
-  "countryId" bigint generated always as identity,
-  "name" varchar NOT NULL
+
+CREATE TABLE "Service" (
+  "serviceId" int generated always as identity,
+  "name" varchar NOT NULl
 );
 
-ALTER TABLE "Country" ADD CONSTRAINT "pkCountry" PRIMARY KEY ("countryId");
+ALTER TABLE "Service" ADD CONSTRAINT "pkService" PRIMARY KEY ("serviceId");
 
-CREATE UNIQUE INDEX "akCountry" ON "Country" ("name");
+CREATE UNIQUE INDEX "akService" ON "Service" ("name");
+
+CREATE TABLE "Equipment" (
+  "eid" bigint generated always as identity,
+  "url" text,
+  "name" text,
+  "country" text,
+  "city" text,
+  "institute" text,
+  "service" int,
+  "approved" boolean
+);
+
+ALTER TABLE "Equipment" ADD CONSTRAINT "pkEquipment" PRIMARY KEY ("eid");
+ALTER TABLE  "Equipment" ADD CONSTRAINT "fkEquipment" FOREIGN KEY ("service") REFERENCES "Service" ("serviceId");
+
 

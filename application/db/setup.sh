@@ -1,3 +1,3 @@
-psql -f install.sql -U postgres
-PGPASSWORD=marcus psql -d application -f structure.sql -U imnetcat
-PGPASSWORD=marcus psql -d application -f data.sql -U imnetcat
+psql -U postgres -f ./install.sql
+PGPASSWORD=imnetcat psql -d application -f structure.sql -U imnetcat
+PGPASSWORD=imnetcat psql -d application -f data.sql -U imnetcat
