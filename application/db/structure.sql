@@ -41,8 +41,14 @@ CREATE TABLE "Service" (
 );
 
 ALTER TABLE "Service" ADD CONSTRAINT "pkService" PRIMARY KEY ("serviceId");
-
 CREATE UNIQUE INDEX "akService" ON "Service" ("name");
+
+CREATE TABLE "Tag" (
+  "tagId" int generated always as identity,
+  "name" varchar NOT NULl
+);
+ALTER TABLE "Tag" ADD CONSTRAINT "pkTag" PRIMARY KEY ("tagId");
+CREATE UNIQUE INDEX "akTag" ON "Tag" ("name");
 
 CREATE TABLE "Equipment" (
   "eid" bigint generated always as identity,
