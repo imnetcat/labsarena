@@ -62,7 +62,6 @@ CREATE TABLE "Equipment" (
 );
 
 ALTER TABLE "Equipment" ADD CONSTRAINT "pkEquipment" PRIMARY KEY ("eid");
-ALTER TABLE  "Equipment" ADD CONSTRAINT "fkEquipment" FOREIGN KEY ("service") REFERENCES "Service" ("serviceId");
 
 CREATE TABLE "EquipmentTags" (
   "tagid" int NOT NULL,
