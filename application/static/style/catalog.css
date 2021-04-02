@@ -40,16 +40,30 @@ hr {
     border: 1px solid #eef1f5;
     box-shadow: none;
     border-radius: 15px;
-    padding: 15px;
 	transition: 0.25s all linear;
-    text-align: center;
-    font-size: 1.5em;
 }
 .item:hover {
-    box-shadow: 10px 10px 10px #eef1f5;
+    box-shadow: 10px 10px 10px #adadad;
 }
 .item span {
     display: block;
+}
+.item img {
+	opacity:0.1;
+	position: absolute;
+	width:400px;
+	height:400px;
+    border-radius: 15px;
+	transition:  inherit;
+}
+.item:hover img {
+	opacity:1;
+}
+
+.item div {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5em;
 }
 .title {
 }
@@ -57,4 +71,12 @@ hr {
 }
 .institute {
 	
+}
+#apply-filters {
+    text-transform: uppercase;
+    width: 120px;
+    height: 30px;
+    background: rgb(255, 102, 36);
+    font-weight: bold;
+    color: #fff;
 }

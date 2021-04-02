@@ -43,25 +43,25 @@
 			<h3>X-Ray based</h3>
 			<ul>
 				<li>
-					<input type="checkbox" id="tech-xrd" name="xrd" checked>
-					<label for="xrd">XRD</label>
+					<input type="checkbox" id="tech-xrd" checked>
+					<label for="tech-xrd">XRD</label>
 				</li>
 				<li>
-					<input type="checkbox" id="tech-xrd" name="xrf" checked>
-					<label for="xrf">XRF</label>
+					<input type="checkbox" id="tech-xrd" checked>
+					<label for="tech-xrf">XRF</label>
 				</li>
 				<li>
-					<input type="checkbox" id="tech-txrf" name="txrf" checked>
-					<label for="txrf">TXRF</label>
+					<input type="checkbox" id="tech-txrf" checked>
+					<label for="tech-txrf">TXRF</label>
 				</li>
 				<li>
-					<input type="checkbox" id="tech-saxs" name="saxs" checked>
-					<label for="saxs">SAXS</label>
+					<input type="checkbox" id="tech-saxs" checked>
+					<label for="tech-saxs">SAXS</label>
 				</li>
 			</ul>
 			<h3>Country</h3>
-			<select>
-				<option value="">--Please choose a country--</option>
+			<select id="country">
+				<option value="all">All around the world</option>
 				<option value="ukraine">Ukraine</option>
 				<option value="portugal">Portugal</option>
 				<option value="poland">Poland</option>
@@ -70,16 +70,46 @@
 				<option value="japan">Japan</option>
 			</select>
 			<h3>Service type</h3>
+			<ul>
+				<li>
+					<input type="checkbox" id="service-sharing" checked>
+					<label for="service-sharing">Sharing within collaboration</label>
+				</li>
+				<li>
+					<input type="checkbox" id="service-rent" checked>
+					<label for="service-rent">For rent</label>
+				</li>
+				<li>
+					<input type="checkbox" id="service-sale" checked>
+					<label for="service-sale">For sale</label>
+				</li>
+				<li>
+					<input type="checkbox" id="service-usedsale" checked>
+					<label for="service-usedsale">Used equipment for sale</label>
+				</li>
+				<li>
+					<input type="checkbox" id="service-external" checked>
+					<label for="service-external">External services</label>
+				</li>
+			</ul>
 			<h3>Institute</h3>
+			<select id="institute">
+				<option value="all">All around the world</option>
+			</select>
+			<hr>
+			<button id="apply-filters">Apply filters</button>
         </div>
         <div class="catalog">
 			
 			<a class="item" target="_blank" href="https://www.intibs.pl/en/the-institute/research/division-of-nanomaterials-chemistry-and-catalysis.html">
-				<span class="title">Philips CM-20 SuperTwin transmission electron microscope: accelerating voltage of 200 kV, resolution of 0.24 nm.</span>
-				<hr>
-				<span class="city">Poland (Wroclaw)</span>
-				<br>
-				<span class="institute">INTIBS PAN, Division of Nanomaterials Chemistry and Catalysis Laboratory of Electron Microscopy</span>
+				<img src="./test-img.jpg">
+				<div>
+					<span class="title">Philips CM-20 SuperTwin transmission electron microscope: accelerating voltage of 200 kV, resolution of 0.24 nm.</span>
+					<hr>
+					<span class="city">Poland (Wroclaw)</span>
+					<br>
+					<span class="institute">INTIBS PAN, Division of Nanomaterials Chemistry and Catalysis Laboratory of Electron Microscopy</span>
+				</div>
 			</a> 
 				
         </div>
