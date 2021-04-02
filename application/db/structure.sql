@@ -47,6 +47,7 @@ CREATE UNIQUE INDEX "akService" ON "Service" ("name");
 CREATE TABLE "Equipment" (
   "eid" bigint generated always as identity,
   "url" text,
+  "tags" text,
   "name" text,
   "description" text,
   "country" text,
