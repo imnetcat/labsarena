@@ -26,6 +26,71 @@ INSERT INTO "Service" ("name") VALUES
   ('For Sale'),
   ('Second Hand Equipment'),
   ('Paid Services');
+  
+INSERT INTO "Tag" ("name") VALUES
+  ('XRD'),
+  ('XRF'),
+  ('TXRR'),
+  ('SAXS'),
+  ('SEM'),
+  ('ESEM'),
+  ('TEM'),
+  ('EDS/EDX'),
+  ('WDS/WDXS'),
+  ('EBSD'),
+  ('RBS'),
+  ('EBS'),
+  ('ERD'),
+  ('PIXE'),
+  ('NRA'),
+  ('SIMS');
 
-INSERT INTO "Equipment" ("url", "name", "country", "city", "institute", "service", "approved") VALUES
-  ('https://www.intibs.pl/en/the-institute/research/division-of-nanomaterials-chemistry-and-catalysis.html', 'Philips CM-20 SuperTwin transmission electron microscope: accelerating voltage of 200 kV, resolution of 0.24 nm.', 'Poland', 'Wroclaw', 'INTIBS PAN, Division of Nanomaterials Chemistry and Catalysis Laboratory of Electron Microscopy', 1, true);
+INSERT INTO "Equipment" ("url", "name", "description", "country", "city", "institute", "approved") VALUES
+  ('https://www.intibs.pl/en/the-institute/research/division-of-nanomaterials-chemistry-and-catalysis.html ', 'Philips CM-20 SuperTwin transmission electron microscope', 'accelerating voltage of 200 kV, resolution of 0.24 nm', 'Poland', 'Wroclaw', 'Institute of low temperature and structure research Polish academy of sciences', true),
+  ('https://www.intibs.pl/en/the-institute/research/division-of-nanomaterials-chemistry-and-catalysis.html ', 'Tesla BC 500 TEM', 'accelerating voltage 90 kV, resolution of 1.0 nm.', 'Poland', 'Wroclaw', 'Institute of low temperature and structure research Polish academy of sciences', true),
+  ('https://www.intibs.pl/en/the-institute/research/division-of-nanomaterials-chemistry-and-catalysis.html ', 'FESEM FEI Nova 230 NanosSEM', 'scanning electron microscope with a resolution of 1 nm, with the possibility of working in low vacuum, equipped with a spectrometer (EDS EDAX Genesis) and a probe to study the electron backscatter diffraction (EBSD EDAX).', 'Poland', 'Wroclaw', 'Institute of low temperature and structure research Polish academy of sciences', true),
+  ('https://www.intibs.pl/en/the-institute/research/division-of-nanomaterials-chemistry-and-catalysis.html ', 'Philips 515 scanning electron microscope ', 'accelerating voltage 30 kV, resolution of 5 nm) equipped with a spectrometer (EDS EDAX Genesis).', 'Poland', 'Wroclaw', 'Institute of low temperature and structure research Polish academy of sciences', true),
+  ('', 'ZEISS EVO 50XVP by ZEISS Scanning electron microscope', 'Scanning electron microscope, equipped with energy dispersive X-ray spectrum analyzer INCAPenteFETx3 and HKL CHANNEL-5 system for electron diffraction produced by OXFORD.', 'Ukraine', 'Kyiv', 'Institute of Superhard Materials. V.M. Bakula of the National Academy of Sciences of Ukraine', true),
+  ('http://www.uhvem.osaka-u.ac.jp/en/what.html', 'H3000 UHVEM – The 3 MV ultra-high voltage electron microscope', 'Osaka University, Research Center for Ultra-High Voltage Electron Microscopy (UHVEM)', 'Japan', 'Osaka', 'Osaka University, Research Center for Ultra-High Voltage Electron Microscopy (UHVEM)', true),
+  ('https://rigaku.com/products/xrd/smartlab', 'High resolution X-Ray  Diffractometer', '', 'Estonia', 'Riga', 'The Institute of Physics for Advanced Materials, Nanotechnology and Photonics (IFIMUP)', true),
+  ('https://rigaku.com/products/xrd/smartlab', 'High resolution X-Ray  Diffractometer', '', 'Estonia', 'Riga', 'Rigaku Corporation', true),
+  ('https://rigaku.com/products/xrd/smartlab', 'SmartLab AUTOMATED MULTIPURPOSE X-RAY DIFFRACTOMETER (XRD) WITH GUIDANCE SOFTWARE', '', 'Estonia', 'Riga', 'Rigaku Corporation', true),
+  ('https://cemup.up.pt/webcemup/IMICROS/IMICROS_lab/IMICROS_lmev.htm#REEQ', 'FEI quanta 400 FEG SEM / EDAX Genesis', '', 'Portugal', 'Porto', 'MATERIALS CENTRE OF THE UNIVERSITY OF PORTO', true),
+  ('https://cemup.up.pt/webcemup/IMICROS/IMICROS_lab/IMICROS_lmev.htm#REEQ', 'Kratos Axis Ultra HSA', '', 'Portugal', 'Porto', 'MATERIALS CENTRE OF THE UNIVERSITY OF PORTO', true);
+  
+INSERT INTO "EquipmentService" ("serviceid", "eid") VALUES
+  (1, 1),
+  (1, 2),
+  (1, 3),
+  (1, 4),
+  (1, 5),
+  (1, 6),
+  (1, 7),
+  (1, 8),
+  (3, 8),
+  (1, 9),
+  (3, 9),
+  (3, 10),
+  (5, 10),
+  (5, 10);
+  
+INSERT INTO "EquipmentTags" ("tagid", "eid") VALUES
+  (7, 1),
+  (7, 2),
+  (5, 3),
+  (8, 3),
+  (5, 4),
+  (8, 4),
+  (5, 5),
+  (5, 6),
+  (7, 7),
+  (1, 8),
+  (1, 9),
+  (1, 10),
+  (4, 10),
+  (5, 11),
+  (8, 11),
+  (10, 11),
+  (12, 11),
+  (1, 12),
+  (2, 12);
