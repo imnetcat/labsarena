@@ -20,14 +20,14 @@ INSERT INTO "SystemGroupSystemUser" ("systemGroupId", "systemUserId") VALUES
   (2, 3);
 
 
-INSERT INTO "Service" ("name") VALUES
+INSERT INTO "service" ("name") VALUES
   ('Sharing/Collaboration'),
   ('For Rent'),
   ('For Sale'),
   ('Second Hand Equipment'),
   ('Paid Services');
   
-INSERT INTO "Tag" ("name") VALUES
+INSERT INTO "tag" ("name") VALUES
   ('XRD'),
   ('XRF'),
   ('TXRR'),
@@ -45,7 +45,7 @@ INSERT INTO "Tag" ("name") VALUES
   ('NRA'),
   ('SIMS');
 
-INSERT INTO "Equipment" ("url", "name", "description", "country", "city", "institute", "approved") VALUES
+INSERT INTO "equipment" ("url", "name", "description", "country", "city", "institute", "approved") VALUES
   ('https://www.intibs.pl/en/the-institute/research/division-of-nanomaterials-chemistry-and-catalysis.html ', 'Philips CM-20 SuperTwin transmission electron microscope', 'accelerating voltage of 200 kV, resolution of 0.24 nm', 'Poland', 'Wroclaw', 'Institute of low temperature and structure research Polish academy of sciences', true),
   ('https://www.intibs.pl/en/the-institute/research/division-of-nanomaterials-chemistry-and-catalysis.html ', 'Tesla BC 500 TEM', 'accelerating voltage 90 kV, resolution of 1.0 nm.', 'Poland', 'Wroclaw', 'Institute of low temperature and structure research Polish academy of sciences', true),
   ('https://www.intibs.pl/en/the-institute/research/division-of-nanomaterials-chemistry-and-catalysis.html ', 'FESEM FEI Nova 230 NanosSEM', 'scanning electron microscope with a resolution of 1 nm, with the possibility of working in low vacuum, equipped with a spectrometer (EDS EDAX Genesis) and a probe to study the electron backscatter diffraction (EBSD EDAX).', 'Poland', 'Wroclaw', 'Institute of low temperature and structure research Polish academy of sciences', true),
@@ -58,7 +58,7 @@ INSERT INTO "Equipment" ("url", "name", "description", "country", "city", "insti
   ('https://cemup.up.pt/webcemup/IMICROS/IMICROS_lab/IMICROS_lmev.htm#REEQ', 'FEI quanta 400 FEG SEM / EDAX Genesis', 'High Resolution Environmental Scanning Electron Microscope (Schottky) ,with X-Ray Microanalysis FEI Quanta 400FEG ESEM / EDAX Genesis X4M 1.2 nm resolution', 'Portugal', 'Porto', 'MATERIALS CENTRE OF THE UNIVERSITY OF PORTO', true),
   ('https://cemup.up.pt/webcemup/IMICROS/IMICROS_lab/IMICROS_lmev.htm#REEQ', 'Kratos Axis Ultra HSA', 'High Resolution Environmental Scanning Electron Microscope (Schottky) ,with X-Ray Microanalysis FEI Quanta 400FEG ESEM / EDAX Genesis X4M  1.2 nm resolution', 'Portugal', 'Porto', 'MATERIALS CENTRE OF THE UNIVERSITY OF PORTO', true);
   
-INSERT INTO "EquipmentService" ("serviceid", "eid") VALUES
+INSERT INTO "equipmentservice" ("serviceid", "eid") VALUES
   (1, 1),
   (1, 2),
   (1, 3),
@@ -74,7 +74,7 @@ INSERT INTO "EquipmentService" ("serviceid", "eid") VALUES
   (5, 10),
   (5, 10);
   
-INSERT INTO "EquipmentTags" ("tagid", "eid") VALUES
+INSERT INTO "equipmenttags" ("tagid", "eid") VALUES
   (7, 1),
   (7, 2),
   (5, 3),

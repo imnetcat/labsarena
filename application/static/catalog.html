@@ -39,15 +39,48 @@
 	<main class="page">
         <div class="side-menu">
 			<h2>Filters</h2>
+			<lable>Country</lable>
+			<select id="country">
+				<option value="all">All around the world</option>
+				<option value="ukraine">Ukraine</option>
+				<option value="portugal">Portugal</option>
+				<option value="poland">Poland</option>
+				<option value="germany">Germany</option>
+				<option value="estonia">Estonia</option>
+				<option value="japan">Japan</option>
+			</select>
+			<span id="service-lable">Service type</span>
+			<ul id="service">
+				<li>
+					<input type="checkbox" id="service-sharing" checked>
+					<label for="service-sharing">Sharing/Collaboration</label>
+				</li>
+				<li>
+					<input type="checkbox" id="service-rent">
+					<label for="service-rent">For Sent</label>
+				</li>
+				<li>
+                    <input type="checkbox" id="service-sale">
+					<label for="service-sale">For Sale</label>
+				</li>
+				<li>
+					<input type="checkbox" id="service-usedsale" checked>
+					<label for="service-usedsale">Second Hand Equipment</label>
+				</li>
+				<li>
+					<input type="checkbox" id="service-external">
+					<label for="service-external">Paid services</label>
+				</li>
+			</ul>
 			<h3>Analitical Techniques</h3>
-			<h3>X-Ray based</h3>
-			<ul>
+			<span id="xray-lable">X-Ray based</span>
+			<ul id="xray">
 				<li>
 					<input type="checkbox" id="tech-xrd" checked>
 					<label for="tech-xrd">XRD</label>
 				</li>
 				<li>
-					<input type="checkbox" id="tech-xrd" checked>
+					<input type="checkbox" id="tech-xrf" checked>
 					<label for="tech-xrf">XRF</label>
 				</li>
 				<li>
@@ -59,60 +92,64 @@
 					<label for="tech-saxs">SAXS</label>
 				</li>
 			</ul>
-			<h3>Country</h3>
-			<select id="country">
-				<option value="all">All around the world</option>
-				<option value="ukraine">Ukraine</option>
-				<option value="portugal">Portugal</option>
-				<option value="poland">Poland</option>
-				<option value="germany">Germany</option>
-				<option value="estonia">Estonia</option>
-				<option value="japan">Japan</option>
-			</select>
-			<h3>Service type</h3>
-			<ul>
+			<span id="emrt-lable">Electron Microscopy and Related Techniques</span>
+			<ul id="emrt">
 				<li>
-					<input type="checkbox" id="service-sharing" checked>
-					<label for="service-sharing">Sharing within collaboration</label>
+					<input type="checkbox" id="tech-sem" checked>
+					<label for="tech-sem">SEM</label>
 				</li>
 				<li>
-					<input type="checkbox" id="service-rent" checked>
-					<label for="service-rent">For rent</label>
+					<input type="checkbox" id="tech-esem" checked>
+					<label for="tech-esem">ESEM</label>
 				</li>
 				<li>
-					<input type="checkbox" id="service-sale" checked>
-					<label for="service-sale">For sale</label>
-				</li>
+					<input type="checkbox" id="tech-tem" checked>
+					<label for="tech-tem">TEM</label>
+                </li>
 				<li>
-					<input type="checkbox" id="service-usedsale" checked>
-					<label for="service-usedsale">Used equipment for sale</label>
-				</li>
+					<input type="checkbox" id="tech-edsx" checked>
+                    <label for="tech-edsx">EDS/EDX</label>
+                </li>
 				<li>
-					<input type="checkbox" id="service-external" checked>
-					<label for="service-external">External services</label>
-				</li>
-			</ul>
-			<h3>Institute</h3>
-			<select id="institute">
-				<option value="all">All around the world</option>
-			</select>
+					<input type="checkbox" id="tech-wdsx" checked>
+					<label for="tech-wdsx">WDS/WDXS</label>
+                </li>
+				<li>
+					<input type="checkbox" id="tech-esbd" checked>
+					<label for="tech-esbd">EBSD</label>
+                </li>
+            </ul>
+            <span id="iobeam-lable">Ion Beam Analysis</span>
+            <ul id="iobeam">
+                <li>
+					<input type="checkbox" id="tech-rbs" checked>
+					<label for="tech-rbs">RBS</label>
+                </li>
+                <li>
+					<input type="checkbox" id="tech-ebs" checked>
+					<label for="tech-ebs">EBS</label>
+                </li>
+                <li>
+					<input type="checkbox" id="tech-erd" checked>
+					<label for="tech-erd">ERD</label>
+                </li>
+                <li>
+					<input type="checkbox" id="tech-pixe" checked>
+					<label for="tech-pixe">PIXE</label>
+                </li>
+                <li>
+					<input type="checkbox" id="tech-nra" checked>
+					<label for="tech-nra">NRA</label>
+                </li>
+                <li>
+					<input type="checkbox" id="tech-sims" checked>
+					<label for="tech-sims">SIMS</label>
+                </li>
+            </ul>
 			<hr>
 			<button id="apply-filters">Apply filters</button>
         </div>
-        <div class="catalog">
-			
-			<a class="item" target="_blank" href="https://www.intibs.pl/en/the-institute/research/division-of-nanomaterials-chemistry-and-catalysis.html">
-				<img src="./test-img.jpg">
-				<div>
-					<span class="title">Philips CM-20 SuperTwin transmission electron microscope: accelerating voltage of 200 kV, resolution of 0.24 nm.</span>
-					<hr>
-					<span class="city">Poland (Wroclaw)</span>
-					<br>
-					<span class="institute">INTIBS PAN, Division of Nanomaterials Chemistry and Catalysis Laboratory of Electron Microscopy</span>
-				</div>
-			</a> 
-				
-        </div>
+        <div class="catalog" id="catalog"></div>
 	</main>
 </body>
 </html>

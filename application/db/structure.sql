@@ -35,49 +35,46 @@ ALTER TABLE "SystemSession" ADD CONSTRAINT "pkSystemSession" PRIMARY KEY ("syste
 ALTER TABLE "SystemSession" ADD CONSTRAINT "fkSystemSessionUser" FOREIGN KEY ("systemUserId") REFERENCES "SystemUser" ("systemUserId");
 
 
-CREATE TABLE "Service" (
+CREATE TABLE service (
   "serviceid" int generated always as identity,
   "name" varchar NOT NULl
 );
 
-ALTER TABLE "Service" ADD CONSTRAINT "pkService" PRIMARY KEY ("serviceid");
-CREATE UNIQUE INDEX "akService" ON "Service" ("name");
+ALTER TABLE service ADD CONSTRAINT pkservice PRIMARY KEY (serviceid);
+CREATE UNIQUE INDEX akservice ON service (name);
 
-CREATE TABLE "Tag" (
-  "tagid" int generated always as identity,
-  "name" varchar NOT NULl
+CREATE TABLE tag (
+  tagid int generated always as identity,
+  name varchar NOT NULl
 );
-ALTER TABLE "Tag" ADD CONSTRAINT "pkTag" PRIMARY KEY ("tagid");
-CREATE UNIQUE INDEX "akTag" ON "Tag" ("name");
+ALTER TABLE tag ADD CONSTRAINT pktag PRIMARY KEY (tagid);
+CREATE UNIQUE INDEX aktag ON tag (name);
 
-CREATE TABLE "Equipment" (
-  "eid" bigint generated always as identity,
-  "url" text NOT NULL,
-  "name" text NOT NULL,
-  "description" text,
-  "country" text NOT NULL,
-  "city" text NOT NULL,
-  "institute" text NOT NULL,
-  "approved" boolean NOT NULL
+CREATE TABLE equipment (
+  eid bigint generated always as identity,
+  url text NOT NULL,
+  name text NOT NULL,
+  description text,
+  country text NOT NULL,
+  city text NOT NULL,
+  institute text NOT NULL,
+  approved boolean NOT NULL
 );
 
-ALTER TABLE "Equipment" ADD CONSTRAINT "pkEquipment" PRIMARY KEY ("eid");
+ALTER TABLE equipment ADD CONSTRAINT pkequipment PRIMARY KEY (eid);
 
-CREATE TABLE "EquipmentTags" (
-  "tagid" int NOT NULL,
-  "eid" int NOT NULL
+CREATE TABLE equipmenttags (
+  tagid int NOT NULL,
+  eid int NOT NULL
 );
-ALTER TABLE "EquipmentTags" ADD CONSTRAINT "fk1EquipmentTags" FOREIGN KEY ("tagid") REFERENCES "Tag" ("tagid");
-ALTER TABLE "EquipmentTags" ADD CONSTRAINT "fk2EquipmentTags" FOREIGN KEY ("eid") REFERENCES "Equipment" ("eid");
+ALTER TABLE equipmenttags ADD CONSTRAINT fk1equipmenttags FOREIGN KEY (tagid) REFERENCES tag (tagid);
+ALTER TABLE equipmenttags ADD CONSTRAINT fk2equipmenttags FOREIGN KEY (eid) REFERENCES equipment (eid);
 
 
-CREATE TABLE "EquipmentService" (
-  "serviceid" int NOT NULL,
-  "eid" int NOT NULL
+CREATE TABLE equipmentservice (
+  serviceid int NOT NULL,
+  eid int NOT NULL
 );
-ALTER TABLE "EquipmentTags" ADD CONSTRAINT "fk1EquipmentService" FOREIGN KEY ("serviceid") REFERENCES "Service" ("serviceid");
-ALTER TABLE "EquipmentTags" ADD CONSTRAINT "fk2EquipmentService" FOREIGN KEY ("eid") REFERENCES "Equipment" ("eid");
-
-  
-  
+ALTER TABLE equipmentservice ADD CONSTRAINT fk1equipmentservice FOREIGN KEY (serviceid) REFERENCES service (serviceid);
+ALTER TABLE equipmentservice ADD CONSTRAINT fk2equipmentservice FOREIGN KEY (eid) REFERENCES equipment (eid);
 

@@ -10,7 +10,7 @@
   },
   "main": "server.js",
   "scripts": {
-    "start":"node server.js",
+    "start": "node server.js",
     "test": "npm run -s lint && node test/system.js",
     "lint": "eslint --fix ."
   },
